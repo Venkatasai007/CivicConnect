@@ -5,7 +5,7 @@ import { getAllComplains } from '../../redux/complainRelated/complainHandle';
 
 const AllSRS = () => {
   const dispatch = useDispatch();
-  const { complainsList, loading, error } = useSelector((state) => state.complain);
+  const { complainsList, loading } = useSelector((state) => state.complain);
   const { currentUser } = useSelector(state => state.user);
 
   useEffect(() => {

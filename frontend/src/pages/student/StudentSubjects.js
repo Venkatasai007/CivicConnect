@@ -81,7 +81,7 @@ const RenderPoll = ({ poll, handleClearVote }) => {
     const handleOptionSelect = async (optionId) => {
         if (!voted) {
             try {
-                const response = await axios.post(`http://localhost:5000/polls/${poll._id}/vote`, {optionId });
+                // const response = await axios.post(`http://localhost:5000/polls/${poll._id}/vote`, {optionId });
                 const updatedOptions = optionsWithVotes.map(option => {
                     if (option._id === optionId) {
                         option.votes += 1;

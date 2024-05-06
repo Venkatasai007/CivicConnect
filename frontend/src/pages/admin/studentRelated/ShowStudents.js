@@ -2,12 +2,12 @@ import React,{ useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from "react-router-dom";
 import { getAllStudents } from '../../../redux/studentRelated/studentHandle';
-import { deleteUser } from '../../../redux/userRelated/userHandle';
+// import { deleteUser } from '../../../redux/userRelated/userHandle';
 import {
     Paper, Box, IconButton
 } from '@mui/material';
 import PersonRemoveIcon from '@mui/icons-material/PersonRemove';
-import { BlackButton, BlueButton, GreenButton } from '../../../components/buttonStyles';
+import { BlueButton, GreenButton } from '../../../components/buttonStyles';
 import TableTemplate from '../../../components/TableTemplate';
 import PersonAddAlt1Icon from '@mui/icons-material/PersonAddAlt1';
 import SpeedDialTemplate from '../../../components/SpeedDialTemplate';
@@ -30,7 +30,7 @@ const ShowStudents = () => {
     const [showPopup, setShowPopup] = React.useState(false);
     const [message, setMessage] = React.useState("");
 
-    const deleteHandler = (deleteID, address) => {
+    const deleteHandler = () => {
         setMessage("Sorry the delete function has been disabled for now.");
         setShowPopup(true);
         // dispatch(deleteUser(deleteID, address))

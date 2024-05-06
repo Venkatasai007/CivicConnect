@@ -15,7 +15,6 @@ const StudentHomePage = () => {
     const dispatch = useDispatch();
 
     const { userDetails, currentUser, loading, response } = useSelector((state) => state.user);
-    const { subjectsList } = useSelector((state) => state.sclass);
 
     const [subjectAttendance, setSubjectAttendance] = useState([]);
 
@@ -25,8 +24,6 @@ const StudentHomePage = () => {
         dispatch(getUserDetails(currentUser._id, "Student"));
         dispatch(getSubjectList(classID, "ClassSubjects"));
     }, [dispatch, currentUser._id, classID]);
-
-    const numberOfSubjects = subjectsList && subjectsList.length;
 
     useEffect(() => {
         if (userDetails) {

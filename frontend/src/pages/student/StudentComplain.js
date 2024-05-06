@@ -10,13 +10,12 @@ const StudentServiceRequest = () => {
     const [location, setLocation] = useState("");
     const [description, setDescription] = useState("");
     const [date, setDate] = useState("");
-    const [name,setName]=useState("Venky");
+    const [name]=useState("Venky");
     const dispatch = useDispatch();
 
     const { status, currentUser, error } = useSelector(state => state.user);
 
     const user = currentUser._id;
-    const school = currentUser.school._id;
     const address = "ServiceRequest";
 
     const [loader, setLoader] = useState(false);

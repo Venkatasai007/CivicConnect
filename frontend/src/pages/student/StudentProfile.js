@@ -9,7 +9,6 @@ const StudentProfile = () => {
   if (response) { console.log(response) }
   else if (error) { console.log(error) }
 
-  const sclassName = currentUser.sclassName
   const studentSchool = currentUser.school
 
   return (
